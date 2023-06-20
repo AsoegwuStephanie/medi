@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::MEDI_Login Page::</title>
+    <link rel="stylesheet" type="text/css" href="../css/style1.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <div class="cont">
+        <div class="form sign-in">
+            <h2 style=" width: 100%; font-size: 40px;text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Log In</h2>
+            <label>
+                <span class="hidden">Email Address</span>
+                <input type="email" name="email" placeholder="Enter your email address">
+            </label>
+            <label>
+                <span class="hidden">Password</span>
+                <input type="password" name="password" placeholder="Enter your password">
+            </label>
+            <button class="submit" type="button">Log In</button>
+       <p class="forgot-pass">Forgot Password?</p>
+       <div class="social-media">
+        <ul>
+            <li><img src="../images/google.png"></li>
+            <li><img src="../images/apple-logo.png"></li>
+            <li><img src="../images/twitter.png"></li>
+        </ul>
+       </div>
+        </div>
+
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                    <h2> New here?</h2>
+                    <p>Sign up and discover various ways<br> to manage patients records</p>
+                </div>
+                <div class="img-text m-in">
+                    <h2 style="position: relative; left: 30px;"> One of us?</h2>
+                    <p style="position: relative; left: 30px;">Welcome back, log in to your account<br> and manage your patient records</p>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up" >Register</span>
+                    <span class="m-in">Log In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2 style=" width: 100%; font-size: 40px; text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Register</h2>
+                <label>
+                    <span class="hidden">Name</span>
+                    <input type="text" placeholder="Enter your fullname">
+                </label>
+                <label>
+                    <span class="hidden">Age</span>
+                    <input type="number" placeholder="Enter your age">
+                </label>
+
+                <label>
+                    <span class="hidden">Email</span>
+                    <input type="email" placeholder="Enter your email address">
+                </label>
+              
+                    <% let category = ["Male", "Female"] %>
+                    <label >
+                        <span class="hidden">Gender</span>
+                        <select name="gender">
+                            <option value="">Select Your Gender</option>
+                            <% category.forEach((cat) => { %>
+                              <option value="<%= cat %>" <% if(typeof(gender) != 'undefined' && (gender === cat)) { %> 
+                                selected="selected" <% } %> ><%= cat %></option>
+                  
+                            <% }) %>
+                          </select>
+                    </label>
+                      
+                
+                  <label>
+                    <span class="hidden">Phone Number</span>
+                    <input type="number" placeholder="Enter your phonenumber">
+                </label>
+                <label>
+                    <span class="hidden">Hospital Name</span>
+                    <input type="text" placeholder="Enter your hospital name">
+                </label>
+                
+                    <% let department = ["Neurosurgery", "Cardiology", "Optician", "Radiology", "Pediatrician", "Therapy"] %>
+                    <label>
+                    <span class="hidden">Department</span>
+                    <select name="dept">
+                        <option value="">Select Your Department</option>
+                        <% department.forEach((dep) => { %>
+                          <option value="<%= dep %>" <% if(typeof(dept) != 'undefined' && (dept === dep)) { %> 
+                            selected="selected" <% } %> ><%= dep %></option>
+              
+                        <% }) %>
+                      </select>
+                    </label>
+                      
+                    
+                      <label>
+                        <span class="hidden">Address</span>
+                        <input type="text" placeholder="Enter your house address">
+                    </label>
+                <label>
+                    <span class="hidden">Password</span>
+                    <input type="password" placeholder="Enter your password">
+                </label>
+                <label>
+                    <span class="hidden">Confirm Password</span>
+                    <input type="password" placeholder="Confirm your password">
+                </label>
+                <button type="button" class="submit">Register Now</button>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="../javascript/script.js"></script>
+</body>
+</html>
