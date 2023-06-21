@@ -1,9 +1,10 @@
 const express = require('express');
+const passport = require('passport')
 const router = express.Router();
-const {viewHome, viewlogin, viewRegister, registerDoctor} = ('../controller/dController.js');
+const {  registerDoctor} = require ('../controller/dController.js');
 
 // router.get('/', viewHome);
-// router.get('/login', viewlogin);
+// router.post('/login', loginDoctor);
 // router.get('/register', viewRegister);
 router.post('/register', registerDoctor);
 

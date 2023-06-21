@@ -24,3 +24,16 @@
 
 // app.use('/', authRoutes);
 // app.use('/', patientsRoutes);
+
+
+bcrypt.genSalt(10, (err, salt) =>
+bcrypt.hash(newDoctor.password, salt, (err, hash) =>{
+    if(err) throw err;
+    newDoctor.password = hash;
+    newDoctor
+    .save()
+    .then(res.redirect('/register'))
+    .catch((err) => console.log(err));
+})
+
+);

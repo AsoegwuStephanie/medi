@@ -12,19 +12,19 @@
 </head>
 <body>
     
-    
+    <form action="/login" method="post" >
     <div class="cont">
         <div class="form sign-in">
             <h2 style=" width: 100%; font-size: 40px;text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Log In</h2>
             <label>
                 <span class="hidden">Email Address</span>
-                <input type="email" name="email" placeholder="Enter your email address">
+                <input type="email" name="email1" placeholder="Enter your email address">
             </label>
             <label>
                 <span class="hidden">Password</span>
-                <input type="password" name="password" placeholder="Enter your password">
+                <input type="password" name="password1" placeholder="Enter your password">
             </label>
-            <button class="submit" type="button">Log In</button>
+            <button class="submit" type="submit">Log In</button>
        <p class="forgot-pass">Forgot Password?</p>
        <div class="social-media">
         <ul>
@@ -34,7 +34,8 @@
         </ul>
        </div>
         </div>
-
+    </form>
+ <form action="/register" method="post" >
         <div class="sub-cont">
             <div class="img">
                 <div class="img-text m-up">
@@ -50,26 +51,27 @@
                     <span class="m-in">Log In</span>
                 </div>
             </div>
+           
             <div class="form sign-up">
                 <h2 style=" width: 100%; font-size: 40px; text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Register</h2>
                 <label>
                     <span class="hidden">Name</span>
-                    <input type="text" placeholder="Enter your fullname">
+                    <input type="text" placeholder="Enter your fullname" name="name">
                 </label>
                 <label>
                     <span class="hidden">Age</span>
-                    <input type="number" placeholder="Enter your age">
+                    <input type="number" placeholder="Enter your age" name="age">
                 </label>
 
                 <label>
                     <span class="hidden">Email</span>
-                    <input type="email" placeholder="Enter your email address">
+                    <input type="email" placeholder="Enter your email address" name="email">
                 </label>
               
                     <% let category = ["Male", "Female"] %>
                     <label >
                         <span class="hidden">Gender</span>
-                        <select name="gender">
+                        <select name="gender" name="gender">
                             <option value="">Select Your Gender</option>
                             <% category.forEach((cat) => { %>
                               <option value="<%= cat %>" <% if(typeof(gender) != 'undefined' && (gender === cat)) { %> 
@@ -82,17 +84,17 @@
                 
                   <label>
                     <span class="hidden">Phone Number</span>
-                    <input type="number" placeholder="Enter your phonenumber">
+                    <input type="number" placeholder="Enter your phonenumber" name="phonenumber">
                 </label>
                 <label>
                     <span class="hidden">Hospital Name</span>
-                    <input type="text" placeholder="Enter your hospital name">
+                    <input type="text" placeholder="Enter your hospital name" name="hname">
                 </label>
                 
                     <% let department = ["Neurosurgery", "Cardiology", "Optician", "Radiology", "Pediatrician", "Therapy"] %>
                     <label>
                     <span class="hidden">Department</span>
-                    <select name="dept">
+                    <select name="dept" name="dept">
                         <option value="">Select Your Department</option>
                         <% department.forEach((dep) => { %>
                           <option value="<%= dep %>" <% if(typeof(dept) != 'undefined' && (dept === dep)) { %> 
@@ -105,21 +107,22 @@
                     
                       <label>
                         <span class="hidden">Address</span>
-                        <input type="text" placeholder="Enter your house address">
+                        <input type="text" placeholder="Enter your house address" name="address">
                     </label>
                 <label>
                     <span class="hidden">Password</span>
-                    <input type="password" placeholder="Enter your password">
+                    <input type="password" placeholder="Enter your password" name="password">
                 </label>
                 <label>
                     <span class="hidden">Confirm Password</span>
-                    <input type="password" placeholder="Confirm your password">
+                    <input type="password" placeholder="Confirm your password" name="cpass">
                 </label>
-                <button type="button" class="submit">Register Now</button>
-                
-            </div>
+                <button type="submit" class="submit">Register Now</button>
             
+            </div>
+        
         </div>
+    </form>
     </div>
     <script type="text/javascript" src="../javascript/script.js"></script>
 </body>

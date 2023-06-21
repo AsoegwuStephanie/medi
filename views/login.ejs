@@ -12,19 +12,19 @@
 </head>
 <body>
     
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="/login" method="post" >
     <div class="cont">
         <div class="form sign-in">
             <h2 style=" width: 100%; font-size: 40px;text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Log In</h2>
             <label>
                 <span class="hidden">Email Address</span>
-                <input type="email" name="email" placeholder="Enter your email address">
+                <input type="email" name="email1" placeholder="Enter your email address">
             </label>
             <label>
                 <span class="hidden">Password</span>
-                <input type="password" name="password" placeholder="Enter your password">
+                <input type="password" name="password1" placeholder="Enter your password">
             </label>
-            <button class="submit" type="button">Log In</button>
+            <button class="submit" type="submit">Log In</button>
        <p class="forgot-pass">Forgot Password?</p>
        <div class="social-media">
         <ul>
@@ -35,7 +35,7 @@
        </div>
         </div>
     </form>
-
+ <form action="/register" method="post" >
         <div class="sub-cont">
             <div class="img">
                 <div class="img-text m-up">
@@ -51,7 +51,7 @@
                     <span class="m-in">Log In</span>
                 </div>
             </div>
-            <form action="/uReg" method="post" enctype="multipart/form-data">
+           
             <div class="form sign-up">
                 <h2 style=" width: 100%; font-size: 40px; text-align: center;color: #1C3A6B;font-family: 'Poppins', sans-serif;">Register</h2>
                 <label>
@@ -117,12 +117,12 @@
                     <span class="hidden">Confirm Password</span>
                     <input type="password" placeholder="Confirm your password" name="cpass">
                 </label>
-                <button type="button" class="submit">Register Now</button>
-            </form>
-            </div>
+                <button type="submit" class="submit">Register Now</button>
             
+            </div>
+        
         </div>
-    
+    </form>
     </div>
     <script type="text/javascript" src="../javascript/script.js"></script>
 </body>
